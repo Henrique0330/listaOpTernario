@@ -9,10 +9,16 @@
 
     //Entrada
 
+    const horasSemana = parseFloat(prompt("Insira quantas horas você trabalha na semana:").trim().replace(",","."));
+    const horasTrabalhada = parseFloat(prompt("Insira quanto você recebe por hora trabalhada:").trim().replace(",","."));
 
     //Processamento
+    let dinheiroSemana = ((horasSemana / 7) * horasTrabalhada) * 7;
+    let adicional = (dinheiroSemana * 0.2) + dinheiroSemana;
+    let adicional2 = (dinheiroSemana * 0.3) + dinheiroSemana;
+    (horasSemana <= 45) ? alert(`Não houve adicional, esse é o dinheiro que você recebe por semana: R$ ${dinheiroSemana.toFixed(2).replace(".",",")}`) :
+    (horasSemana <= 60 && horasSemana > 45) ? alert(`Houve um aumento de 20%, R$ ${adicional.toFixed(2).replace(".",",")} no seu salário`) : 
+    (horasSemana > 60) ? alert(`Houve um aumento de 30%, R$ ${adicional2.toFixed(2).replace(".",",")} no seu salário`) : alert(`Dados inválidos.`);
 
-    
     //Saída
-
 </script>

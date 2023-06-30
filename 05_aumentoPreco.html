@@ -12,12 +12,10 @@
     const preco = parseFloat(prompt("Insira o preço do produto").trim().replace(",", "."));
 
     //Processamento
-    let mensagem = (preco <= 280) ? 'Esse será seu aumento do preço '  (preco * 0.2 + preco).toFixed(2).replace(".", ",")
-        : (preco <= 700) ? 'Esse será seu aumento do preço' (preco * 0.15 + preco)
-            : (preco <= 1500) ? 'Esse será seu aumento do preço' (preco * 0.1 + preco)
-                : 'Esse será seu aumento do preço' (preco * 0.05 + preco);
+    let mensagem = (preco <= 280) ? alert(`${(preco * 0.2 + preco)} reais será seu aumento no preço`).toFixed(2).replace(".", ",")
+        : (preco <= 700) ?  alert(`${(preco * 0.15 + preco)} reais será seu aumento no preço`)
+            : (preco <= 1500) ?  alert(`${(preco * 0.1 + preco)} reais será seu aumento no preço`)
+                :  alert(`${(preco * 0.05 + preco)} reais será seu aumento no preço`)
     //Saída
-
-    alert(`${mensagem}`)
 
 </script>

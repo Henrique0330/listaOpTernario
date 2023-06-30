@@ -8,10 +8,10 @@
     const ano = parseInt(prompt("Informe em que ano você nasceu").trim());
     const anoAtual = new Date().getFullYear()
     const calculo = (anoAtual - ano)
-   
+
     //Processamento
     let mensagem = (calculo >= 16) ? `Você já pode votar`
-    : `Você ainda não pode`
+        : `Você ainda não pode`
 
     //Saída
     alert(mensagem)

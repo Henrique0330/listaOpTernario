@@ -11,10 +11,20 @@
 
     //Entrada
 
+    const salário = parseFloat(prompt('Informe o valor que você recebe de remuneração mensal').trim().replace(",", ".")).toFixed(2);
+    const contaAgua = parseFloat(prompt('Informe o valor da conta de água').trim().replace(",", ".")).toFixed(2);
+    const contaDeEnergia = parseFloat(prompt('Informe o valor da conta de energia').trim().replace(",", ".")).toFixed(2);
+    const ContaDeTelefone = parseFloat(prompt('Informe o valor da conta telefonica').trim().replace(",", ".")).toFixed(2);
+    const Supermercado = parseFloat(prompt('Informe o valor gastado no supermercado').trim().replace(",", ".")).toFixed(2);
 
     //Processamento
-
-    
+    const despesaMes = contaAgua + contaDeEnergia + ContaDeTelefone + Supermercado;
+    const diferenca = salário - despesaMes;
+    (diferenca > 0) ? alert(`O seu salário é maior que as despesas, sobra: R$ ${diferenca.toFixed(2).replace(".",",")} por mês`) : 
+    (diferenca < 0) ? alert(`O seu salário é menor que as despesas, falta: R$ ${(diferenca * -1).toFixed(2).replace(".",",")}`) :
+    (diferenca == 0) ? alert(`O seu salário é igual a sua despesa, valor = R$ ${salário.toFixed(2).replace(".",",")}`) :
+    alert(`Dados inválidos.`);
     //Saída
     
+
 </script>
